@@ -7,33 +7,49 @@ font-size: 90px;
 font-weight: lighter;
 color: #E7D200;
 }
+
 h2{
     font-family: 'Amatic SC', cursive;
     font-size: 55px;
 }
+
 body{
     background-image: url("../images/tree_bark.png");
 }
-#title, #mood{
+
+#title, #buttons, #user-input{
     font-family: 'Patrick Hand SC', cursive;
     font-size: 30px;
+   }
 
+button{
+    background-color: #E7D200;
+    border-style: dotted;
+    border-color: rgb(251, 243, 155)
 }
+
+button:hover{
+    background-color: #FFC300;
+}
+
 .card{
     margin:15px;
     padding: 35px;
     background-color: #E7D200;
 }
-.submit{
+
+ #addMood, p{
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
     font-weight: bold;
 }
+
 input{
     width: 80px;
     margin: 5px;
     padding:5px;
 }
+
 .giphy{
     align-self: center;
     float:none;

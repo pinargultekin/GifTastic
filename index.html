@@ -24,35 +24,26 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 giphy"> <img src="assets/images/mood.gif"></div>
+
             <div class="card col-lg-5" id="buttons">
                 <h2> Click a button according to your mood!</h2>
-                <div>
-                <input type="image" src="assets/images/fun.svg" alt="happy" data-mood="happy">
-                <input type="image" src="assets/images/exhausted.svg" alt="exhausted" data-mood="exhausted">
-                <input type="image" src="assets/images/kips.svg" alt="winking" data-mood="winking">
-                <input type="image" src="assets/images/fun-cry.svg" alt="laugh" data-mood="laugh">
-                <input type="image" src="assets/images/love.svg" alt="in love" data-mood="in love">
-                <input type="image" src="assets/images/sad-cry.svg" alt="sad" data-mood="sad">
-                </div>
-                <div id="added-button"> <h2>Your Mood Button</h2></div>
+
             </div>
+
             <div class="card col-lg-5" id="user-button">
-
                 <h2>If your mood is not here create a button that reflects your mood!</h2>
-                <div class="form-group">
-                    <label id="title" for="searchTerm">Enter your mood:</label>
-                    <input type="text" class="form-control" id="mood" placeholder="Happy" />
-                </div>
-                <button type="button" class="btn btn-outline-warning submit">Submit</button>
+                <form id="form">
+                    <label id="title" for="user-input">Enter your mood:</label>
+                    <input type="text" class="form-control" id="user-input" placeholder="Happy" />
+                    <input id="addMood" type="submit" class="btn btn-lg btn-block btn-warning" value="Submit">
+                </form>
             </div>
+
             <div class="card col-lg-10" id="gifs">
-
             </div>
-
         </div>
-    </div>
-    <script src="assets/javascript/app.js" type="text/javascript"></script>
-  
+        <script src="assets/javascript/app.js" type="text/javascript"></script>
+
 </body>
 
 </html>
