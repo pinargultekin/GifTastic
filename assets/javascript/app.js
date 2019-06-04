@@ -7,7 +7,7 @@ $(document).ready(function () {
     //FUNCTION  
     function buttons() {
 
-        // $("#buttons").empty();
+       // $("#buttons").empty();
 
         for (var i = 0; i < currentMood.length; i++) {
             var btn = $("<button>");
@@ -18,18 +18,18 @@ $(document).ready(function () {
 
         };
     };
-
+    
     // Adding mood buttons using submit button
     $("#addMood").on("click", function (event) {
-        //   $("#user-input").empty();
+     //   $("#user-input").empty();
         event.preventDefault();
         var userInput = $("#user-input").val().trim();
         currentMood.push(userInput);
         $("#buttons").append("<button class='searchButton' data-mood= " + userInput + ">" + userInput + "</button>");
-
-
-    });
-
+       
+        
+    }); 
+    
     $("#gifs").hide();
 
     // click event for search button 
@@ -55,7 +55,7 @@ $(document).ready(function () {
                     var p = $("<p>").text("Rating: " + results[i].rating);
 
                     var moodImage = $("<img>");
-                    moodImage.attr("src", results[i].images.fixed_height.url);
+                    moodImage.attr("src", results[i].images.fixed_height_still.url);
                     moodImage.attr("data-animate", results[i].images.fixed_height.url);
                     moodImage.attr("data-still", results[i].images.fixed_height_still.url);
                     moodImage.attr("data-state", "still");
@@ -63,33 +63,26 @@ $(document).ready(function () {
 
                     moodDiv.append(moodImage);
                     moodDiv.append(p);
-
+                    moodImage.on("click", animateGif);
                     $("#gifs").prepend(moodDiv);
 
                 };
             });
-
+            
     });
 
+    function animateGif() {
+
+        var state = $(this).attr("data-state");
+        
+        if (state === "still") {
+          $(this).attr("src", $(this).data("animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).data("still"));
+          $(this).attr("data-state", "still");
+        }
+      };
 
     buttons();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//<a href="https://www.freepik.com/free-photos-vectors/love">Love vector created by freepik - www.freepik.com</a>
