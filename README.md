@@ -8,7 +8,7 @@
 <a name="abstract"></a>
 ## Abstract
 
-On the left-hand side, there are eight buttons which are referred by a mood. 
+On the left-hand side, there are eight buttons which are indicated by a mood. 
 When a user clicks any mood button, related gifs line up.
 Gifs appear in "still" state once a user clicks it on, its state changes to animate.
 On the right-hand side, there is a submit button to add a new mood button.
