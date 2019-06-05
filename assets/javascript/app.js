@@ -21,12 +21,12 @@ $(document).ready(function () {
     
     // Adding mood buttons using submit button
     $("#addMood").on("click", function (event) {
-     //   $("#user-input").empty();
+     
         event.preventDefault();
         var userInput = $("#user-input").val().trim();
         currentMood.push(userInput);
         $("#buttons").append("<button class='searchButton' data-mood= " + userInput + ">" + userInput + "</button>");
-       
+        $("#user-input").val("");
         
     }); 
     
