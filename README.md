@@ -14,6 +14,8 @@ Gifs appear in "still" state once a user clicks it on, its state changes to anim
 On the right-hand side, there is a submit button to add a new mood button.
 Once a new button is created, the user can click the created button, and it behaves just like the other existed buttons.
 
+* You can check it out; https://pinargultekin.github.io/GifTastic/
+
 <a name="overview"></a>
 ## Coding Overview
 
